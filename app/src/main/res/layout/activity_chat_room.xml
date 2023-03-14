@@ -21,7 +21,7 @@
 
         <EditText
             android:id="@+id/message_edittext"
-            android:layout_width="0dp"
+            android:layout_width="198dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="메시지를 적으세요" />
@@ -31,6 +31,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="보내기" />
-    </LinearLayout>
 
+
+        <Button
+            android:id="@+id/draw_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="그림판" />
+</LinearLayout>
 </RelativeLayout>

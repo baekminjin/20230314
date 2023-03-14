@@ -1,5 +1,6 @@
 package com.example.newchat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -29,11 +31,22 @@ import com.google.firebase.database.FirebaseDatabase;
         private FirebaseRecyclerAdapter<ChatMessage, ChatViewHolder> mAdapter;
         private String mChatId;
         private String mNickname;
+        private String message;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_chat_room);
+
+            Button draw_button = (Button) findViewById(R.id.draw_button);
+            draw_button.setOnClickListener(new View.OnClickListener(){
+
+                @Override
+                public void onClick(View view){
+                    Intent intent = new Intent(getApplicationContext(), Draw.class);
+                    startActivity(intent);
+                }
+            });
 
             mChatId = getIntent().getStringExtra("chat_id");
             mNickname = getIntent().getStringExtra("nickname");

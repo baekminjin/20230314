@@ -1,8 +1,8 @@
 package com.example.newchat;
 
 public class ChatMessage {
-    private String nickname ;
-    private String message ;
+    private String nickname="" ;
+    private String message="" ;
 
     public ChatMessage(String nickname, String message) {
         this.nickname = nickname;

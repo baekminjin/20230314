@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ChatRoomActivity"/>
+        <activity android:name=".Draw"/>
     </application>
 
 </manifest>
